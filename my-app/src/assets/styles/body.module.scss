@@ -1,0 +1,42 @@
+@import "./styles.scss";
+
+.App {
+    text-align: center;
+    background-color: $main-color;
+  }
+
+.body {
+    width: 100%;
+    margin-top: 8vw;
+    input[type="text"] {
+    border: 1px solid rgba(122,118,122,1);
+    border-radius: 4px;
+    width: 200px;
+    height: 30px;
+    margin-left: 3vw;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+.newString {
+  display: flex;  
+  flex-direction: row;
+
+
+.binBtn {
+cursor: pointer;
+height: 80%;
+border: none;
+background-color: white;
+margin-top: 5px;
+margin-left: 10px;
+}
+}
+.saveBtn {
+    margin-left: 10px;
+    height: 30px;
+    background-color: $icon-color;
+    border: none;
+    cursor: pointer;
+}
+}

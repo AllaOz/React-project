@@ -1,0 +1,46 @@
+@font-face {
+	font-family: "Roboto", sans-serif;
+	src: url("../fonts/Roboto-Light.ttf");
+}
+
+@font-face {
+	font-family: "Roboto-Medium", sans-serif;
+	src: url("../fonts/Roboto-Medium.ttf");
+}
+
+$default-font: "Roboto", sans-serif;
+$basic-font:  "Roboto-Medium", sans-serif;
+$main-color:  rgb(247,247,248);
+$icon-color: rgb(252,201,56);
+$basic-color:rgb(246,247,251);
+$text-color:  rgb(91, 89, 89);
+$hover-color: rgb(236,59,59);
+
+
+
+@mixin font ($font-size) {
+    font-size: $font-size;
+    font-family: $default-font;
+}
+
+@mixin figure ($font-weight, $font-size) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    font-family: $figure-font;
+}
+
+@mixin button ($width, $height) {
+    width: $width;
+    height: $height;
+    min-height: 44px;
+    max-height: 105px;
+
+    border: 0;
+    border-radius: 15px;
+
+    background-color: $button-color;
+    color: rgba(0, 0, 0, 0.7);
+
+    transition-duration: 1s;
+}
+

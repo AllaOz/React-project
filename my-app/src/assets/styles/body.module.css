@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Roboto", sans-serif;
+  src: url("../fonts/Roboto-Light.ttf");
+}
+@font-face {
+  font-family: "Roboto-Medium", sans-serif;
+  src: url("../fonts/Roboto-Medium.ttf");
+}
+.App {
+  text-align: center;
+  background-color: rgb(247, 247, 248);
+}
+
+.body {
+  width: 100%;
+  margin-top: 8vw;
+}
+.body input[type=text] {
+  border: 1px solid rgb(122, 118, 122);
+  border-radius: 4px;
+  width: 200px;
+  height: 30px;
+  margin-left: 3vw;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.body .newString {
+  display: flex;
+  flex-direction: row;
+}
+.body .newString .binBtn {
+  cursor: pointer;
+  height: 80%;
+  border: none;
+  background-color: white;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+.body .saveBtn {
+  margin-left: 10px;
+  height: 30px;
+  background-color: rgb(252, 201, 56);
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=body.module.css.map */

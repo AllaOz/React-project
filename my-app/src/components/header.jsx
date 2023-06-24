@@ -1,6 +1,6 @@
 import React from 'react';
-import styles from '../assets/styles/header.module.scss'; 
-import logo from '../assets/images/cards.png';
+import styles from './Header.module.scss'; 
+import logo from './assets/images/cards.png';
 
 function Header() {
   return (

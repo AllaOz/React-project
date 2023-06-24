@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from '../assets/styles/footer.module.scss';
+import styles from './footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import logo from '../assets/images/cards.png';
+import logo from './assets/images/cards.png';
 
 function Footer() {
     const currentYear = new Date().getFullYear();

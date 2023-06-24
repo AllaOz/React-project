@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import styles from '../assets/styles/body.module.scss';
-import bin from '../assets/images/bin.png';
+import styles from './body.module.scss';
+import bin from './assets/images/bin.png';
 
 function TranslationComponent(props) {
   const [word, setWord] = useState('');

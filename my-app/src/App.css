@@ -1,1 +1,7 @@
+@import "./utils/Variables.scss";
 
+.App {
+   width: 100vw; 
+   display: flex;
+   align-content: center;
+}

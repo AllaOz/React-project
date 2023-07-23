@@ -14,7 +14,8 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-  
+        <Footer />
+
         <Routes>
     
         <Route path="/React-project" element={<Body />} />
@@ -24,8 +25,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
           
         </Routes>
-    
-        <Footer />
+      
       </div>
     </Router>
   );

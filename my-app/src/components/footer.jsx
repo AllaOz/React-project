@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styles from './footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -24,7 +25,7 @@ function Footer() {
         </a>
       </div>
       <div><p>&copy; {currentYear} Cards</p></div>
-      <a href="/"><img src={logo} className= {styles.logo} alt="logo" /></a>
+      <Link to="/"><img src={logo} className= {styles.logo} alt="logo" /></Link>
     </footer>
   );
 }

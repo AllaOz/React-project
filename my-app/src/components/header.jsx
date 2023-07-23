@@ -1,21 +1,30 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import styles from './Header.module.scss'; 
 import logo from './assets/images/cards.png';
+
 
 function Header() {
   return (
     <header className= {styles.cardHeader}>
       <nav>
         <ul>
-        <a href="/"><img src={logo} className= {styles.logo} alt="logo" /></a>
-          <li><a href="/">Home</a></li>
-          <li><a href="/cards">Cards</a></li>
+        <Link to="/"><img src={logo} className= {styles.logo} alt="logo" /></Link>
+        <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/cards">Cards</Link>
+            </li>
+            <li>
+              <Link to="/words">Words</Link>
+            </li>
+        
           <select className={styles.languagesSelect}>
               <option value="">Language</option>
               <option value="English">English</option>
               <option value="Russian">Русский</option>
             </select>
-          <li><a href="/contact">Contacts</a></li>
         </ul>
       </nav>
     </header>

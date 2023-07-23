@@ -22,11 +22,6 @@ $hover-color: rgb(236,59,59);
     font-family: $default-font;
 }
 
-@mixin figure ($font-weight, $font-size) {
-    font-weight: $font-weight;
-    font-size: $font-size;
-    font-family: $figure-font;
-}
 
 @mixin button ($width, $height) {
     width: $width;

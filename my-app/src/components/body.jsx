@@ -13,7 +13,6 @@ function TranslationComponent() {
   const [savedStrings, setSavedStrings] = useState([]);
   const [editIndex, setEditIndex] = useState(-1);
 
-
   const WordType = (event) => {
     setWord(event.target.value);
   };

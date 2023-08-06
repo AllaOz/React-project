@@ -47,6 +47,9 @@
   color: rgb(91, 89, 89);
   cursor: pointer;
 }
+.translateBtn:focus {
+  outline: 1px solid rgb(91, 89, 89);
+}
 
 .translateBtn:hover {
   background-color: rgb(236, 59, 59);

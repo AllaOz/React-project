@@ -13,6 +13,18 @@
   justify-content: center;
 }
 
+.containerList {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.containerBox {
+  display: flex;
+  width: 60vw;
+  justify-content: flex-start;
+}
+
 .body input[type=text] {
   border: 1px solid rgb(122, 118, 122);
   border-radius: 4px;
@@ -20,6 +32,9 @@
   height: 30px;
   margin-left: 3vw;
   margin-bottom: 10px;
+}
+.body input[type=text]:focus {
+  outline: 2px solid yellow;
 }
 .body .newString {
   width: 100%;
@@ -54,4 +69,7 @@
   background-color: white;
   margin-left: 10px;
   margin-top: 5px;
+}
+.body .editing {
+  border-color: #f00;
 }/*# sourceMappingURL=body.module.css.map */

@@ -5,7 +5,17 @@
   display: flex;
   justify-content: center;
 }
+.containerList {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
 
+.containerBox {
+  display: flex;
+  width: 60vw;
+  justify-content: flex-start;
+}
 .body {
  
   input[type="text"] {
@@ -15,6 +25,10 @@
     height: 30px;
     margin-left: 3vw;
     margin-bottom: 10px;
+
+    &:focus {
+      outline: 2px solid yellow;
+    }
   }
 
   .newString {
@@ -56,4 +70,7 @@
     margin-left: 10px;
     margin-top: 5px;
   }
+  .editing {
+    border-color: #f00; 
+}
 }

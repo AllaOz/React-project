@@ -42,6 +42,10 @@
     background-color:$icon-color;
     color:$text-color;
     cursor: pointer;
+
+    &:focus {
+      outline: 1px solid $text-color;
+    }
   }
 
   .translateBtn:hover {

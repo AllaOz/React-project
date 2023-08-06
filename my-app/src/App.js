@@ -5,8 +5,17 @@ import Footer from './components/Footer';
 import Body from './components/Body';
 import Cards from './components/Cards';
 import NotFound from './components/NotFound';
+import ListOfWords from './components/ListOfWords';
 import './App.module.scss';
 
+function Main() {
+  return (
+    <>
+      <Body />
+      <ListOfWords />
+    </>
+  );
+}
 
 function App() {
   return (
@@ -17,11 +26,10 @@ function App() {
         <Footer />
 
         <Routes>
-    
-        <Route path="/React-project" element={<Body />} />
-        <Route path="/" element={<Body />} />
+        <Route path="/React-project" element={<Main />} />
+        <Route path="/" element={<Main />} />
         <Route path="/cards" element={<Cards />} />
-        <Route path="/words" element={<Body />} />
+        <Route path="/words" element={<Main />} />
         <Route path="*" element={<NotFound />} />
           
         </Routes>

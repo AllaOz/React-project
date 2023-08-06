@@ -82,6 +82,7 @@ function TranslationComponent() {
   
   return (
     <div className={styles.container}>
+    <div className={styles.containerBox}>
     <div className={styles.body}>
       <input 
       type="text" 
@@ -165,9 +166,11 @@ function TranslationComponent() {
             </div>
           );
         })}
+    
+      </div>
       </div>
     </div>
-    </div>
+    </div>  
   );
 }
 

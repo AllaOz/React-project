@@ -5,7 +5,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin-top: 10%;
+    margin-top: 2%;
 }
 
 .card_words {
@@ -45,6 +45,7 @@
 
     &:focus {
       outline: 1px solid $text-color;
+      -moz-box-shadow:0 0 10px #000; -webkit-box-shadow:0 0 5px $text-color; box-shadow:0 0 5px $text-color;
     }
   }
 
@@ -65,7 +66,8 @@
   }
 
   .learnedWords{
-  margin-top: 3vw;
+  margin-top: 10%;
+  text-align: center;
   
   }
 

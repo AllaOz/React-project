@@ -40,14 +40,14 @@ function CardList() {
 
 
   return (
+    <div>
+      <div className={styles.learnedWords}>You've learned {learnedWords} words</div>
     <div className={styles.card_container}>
-       
-      <div>
      
         <button className={styles.nextBtn} onClick={handlePreviousWord} >
           <img src={arrowleft} alt="close icon to cancel editing" />
         </button>
-      </div>
+      
 
       {data.map((item, index) => (
         index === currentWordIndex && (
@@ -60,26 +60,26 @@ function CardList() {
               <div className={styles.card_translation}>{item.translation}</div>
             )}
             
-
+            
             <button 
             className={styles.translateBtn} 
             ref={translateBtnRef}
             onClick={handleToggleTranslation}> 
               {showTranslation ? 'Hide Translation' : 'Show Translation'}
             </button>
-            <div className={styles.learnedWords}>You learned {learnedWords} words</div>
+            
           </div>
         )
       ))}
-      <div>
-      
+  
         <button className={styles.nextBtn} onClick={handleNextWord}>
           <img src={arrowright} alt="close icon to cancel editing" />
         </button>
-      
-      </div>
+     
+       
+      </div>   
     </div>
-    
+   
      
   );
 }

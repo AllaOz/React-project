@@ -5,6 +5,7 @@
         "transcription": "[bluː]",
         "translation": "синий",
         "themes": "цвета"
+       
     },
     {
         "id": 2,
@@ -12,6 +13,7 @@
         "transcription": "[waɪt]",
         "translation": "белый",
         "themes": "цвета"
+        
     },
     {
         "id": 3,
@@ -19,6 +21,7 @@
         "transcription": "[ɡreɪ]",
         "translation": "серый",
         "themes": "цвета"
+        
     },
     {
         "id": 4,
@@ -26,12 +29,14 @@
         "transcription": "[blæk]",
         "translation": "черный",
         "themes": "цвета"
+       
     },
     {
         "word": "yellow",
         "transcription": "[ˈjeloʊ]",
         "translation": "желтый",
         "themes": "цвета"
+       
     },
     {
         "id": 5,
@@ -39,6 +44,7 @@
         "transcription": "[ɡriːn]",
         "translation": "зеленый",
         "themes": "цвета"
+       
     },
     {
         "id": 6,
@@ -46,6 +52,7 @@
         "transcription": "[red]",
         "translation": "красный",
         "themes": "цвета"
+        
     },
     {
         "id": 7,
@@ -53,11 +60,13 @@
         "transcription": "[ˈɔːrɪndʒ]",
         "translation": "оранжевый",
         "themes": "цвета"
+       
     },
     {   "id": 8,
         "word": "purple",
         "transcription": "[ˈpɜːrpl]",
         "translation": "фиолетовый",
         "themes": "цвета"
+       
     }
 ]

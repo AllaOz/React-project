@@ -1,37 +1,43 @@
 import React, { useState } from 'react';
 import { useRef, useEffect } from 'react';
 import styles from './cards.module.scss';
-import data from './data/data.json';
-import arrowleft from './assets/images/left-arrow.png';
-import arrowright from './assets/images/right-arrow.png';
+import data from '../../data/data.json';
+import arrowleft from '../assets/images/left-arrow.png';
+import arrowright from '../assets/images/right-arrow.png';
 
   
 function CardList() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
   const [showTranslation, setShowTranslation] = useState(false);
   const [learnedWords, setLearnedWords] = useState(0);
+  const [translationShown, setTranslationShown] = useState(data.map(() => false));
   const translateBtnRef = useRef(null);
 
   const handleNextWord = () => {
     setCurrentWordIndex((prevIndex) => (prevIndex + 1) % data.length);
-    setShowTranslation(false);
+    setShowTranslation(translationShown[(currentWordIndex + 1) % data.length]);
     translateBtnRef.current.focus();
   };
 
   const handlePreviousWord = () => {
     setCurrentWordIndex((prevIndex) => (prevIndex - 1 + data.length) % data.length);
-    setShowTranslation(false);
+    setShowTranslation(translationShown[(currentWordIndex - 1 + data.length) % data.length]);
   };
 
   const handleToggleTranslation = () => {
-    setShowTranslation(!showTranslation); 
-    if (!showTranslation) {
-      if (!showTranslation) {
-        setLearnedWords((prevCount) => prevCount + 1); 
-      }
+    const translationAlreadyShown = translationShown[currentWordIndex];
+    setShowTranslation(!showTranslation);
+    
+    if (!translationAlreadyShown) {
+      setTranslationShown(prev => {
+        const updatedTranslationShown = [...prev];
+        updatedTranslationShown[currentWordIndex] = true;
+        return updatedTranslationShown;
+      });
+  
+      setLearnedWords(prevCount => prevCount + 1);
       translateBtnRef.current.blur();
     }
-    
   };
 
   useEffect(() => {

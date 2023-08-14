@@ -41,6 +41,9 @@
   display: flex;
   flex-direction: row;
 }
+.body .newString .errorInput {
+  border: 1px solid #f00;
+}
 .body .newString .binBtn {
   cursor: pointer;
   height: 80%;

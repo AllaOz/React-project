@@ -1,11 +1,11 @@
 import React from 'react';
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Body from './components/Body';
-import Cards from './components/Cards';
-import NotFound from './components/NotFound';
-import ListOfWords from './components/ListOfWords';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Body from './components/Body/Body';
+import Cards from './components/Cards/Cards';
+import NotFound from './components/NotFound/NotFound';
+import ListOfWords from './components/ListOfWords/ListOfWords';
 import './App.module.scss';
 
 function Main() {
@@ -28,7 +28,7 @@ function App() {
         <Routes>
         <Route path="/React-project" element={<Main />} />
         <Route path="/" element={<Main />} />
-        <Route path="/cards" element={<Cards />} />
+        <Route path="/game" element={<Cards />} />
         <Route path="/words" element={<Main />} />
         <Route path="*" element={<NotFound />} />
           

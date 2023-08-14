@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from './footer.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebook, faTwitter, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import logo from './assets/images/cards.png';
+import logo from '../assets/images/cards.png';
 
 function Footer() {
     const currentYear = new Date().getFullYear();

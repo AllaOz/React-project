@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import styles from './body.module.scss';
-import bin from './assets/images/bin.png';
-import pencil from './assets/images/pencil.png';
-import check from './assets/images/check-mark.png';
-import close from './assets/images/close.png';
+import styles from '../Body/body.module.scss';
+import bin from '../assets/images/bin.png';
+import pencil from '../assets/images/pencil.png';
+import check from '../assets/images/check-mark.png';
+import close from '../assets/images/close.png';
 
 
 function TranslationComponent() {
@@ -26,6 +26,10 @@ function TranslationComponent() {
   };
 
   const saveWord = () => {
+    if (word.trim() === '' || transcription.trim() === '' || translation.trim() === '') {
+      alert('Error: please, fill in all fields');
+      return;
+    }
     const newString = `${word} ${transcription} ${translation}`;
     setSavedStrings([...savedStrings, newString]);
     setWord('');
@@ -57,6 +61,10 @@ function TranslationComponent() {
   };
 
   const updateWord = () => {
+    if (word.trim() === '' || transcription.trim() === '' || translation.trim() === '') {
+      alert('Error: please, fill in all fields');
+      return;
+    }
     const updatedString = `${word} ${transcription} ${translation}`;
     const updatedStrings = savedStrings.map((savedString, index) => {
       if (index === editIndex) {
@@ -71,6 +79,7 @@ function TranslationComponent() {
     setTranscription('');
     setTranslation('');
   };
+ 
   const handleKeyDown = (event, index) => {
     if (event.key === 'Enter') {
       event.preventDefault();

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import data from './data/data.json';
-import styles from './body.module.scss';
-import pencil from './assets/images/pencil.png';
-import check from './assets/images/check-mark.png';
-import close from './assets/images/close.png';
+import data from '../../data/data.json';
+import styles from '../Body/body.module.scss';
+import pencil from '../assets/images/pencil.png';
+import check from '../assets/images/check-mark.png';
+import close from '../assets/images/close.png';
 
 function WordComponent() {
   const [editIndexItem, setEditIndexItem] = useState(-1);
@@ -53,6 +53,14 @@ function WordComponent() {
     });
   };
 
+  const checkFieldEmpty = () => {
+    return (
+      editedWord.word.trim() === '' ||
+      editedWord.transcription.trim() === '' ||
+      editedWord.translation.trim() === ''
+    );
+  };
+
  
   
   return (
@@ -69,6 +77,9 @@ function WordComponent() {
                 onChange={(event) =>
                   setEditedWord({ ...editedWord, word: event.target.value })
                 }
+                className={
+                  editedWord.word.trim() === '' ? styles.errorInput : ''
+                }
               />
               <input
                 type="text"
@@ -76,7 +87,9 @@ function WordComponent() {
                 onChange={(event) =>
                   setEditedWord({ ...editedWord, transcription: event.target.value })
                 }
-    
+                className={
+                  editedWord.transcription.trim() === '' ? styles.errorInput : ''
+                }
               />
               <input
                 type="text"
@@ -84,6 +97,8 @@ function WordComponent() {
                 onChange={(event) =>
                   setEditedWord({ ...editedWord, translation: event.target.value })
                 }
+                className={editedWord.translation.trim() === '' ? styles.errorInput : ''}
+        
               />
             </>
           ) : (
@@ -96,7 +111,9 @@ function WordComponent() {
           )}
           {editIndexItem === index ? (
               <>
-                <button className={styles.checkBtn} onClick={updateWord}>
+                <button className={styles.checkBtn} 
+                onClick={updateWord}
+                disabled={checkFieldEmpty()}>
                   <img src={check} alt="check icon" />
                 </button>
                 <button className={styles.editBtn} onClick={cancelEditingItem}>
@@ -105,7 +122,9 @@ function WordComponent() {
               </>
             ) : (
               <>
-                <button className={styles.checkBtn} onClick={updateWord}>
+                <button className={styles.checkBtn}
+                 onClick={updateWord}
+                 disabled={checkFieldEmpty()}>
                   <img src={check} alt="check icon" />
                 </button>
                 <button className={styles.editBtn} onClick={() => startEditingItem(index)}>

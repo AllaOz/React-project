@@ -26,7 +26,9 @@ function TranslationComponent() {
   };
 
   const saveWord = () => {
-    if (word.trim() === '' || transcription.trim() === '' || translation.trim() === '') {
+    if (word.trim() === '' ||
+     transcription.trim() === '' ||
+    translation.trim() === '') {
       alert('Error: please, fill in all fields');
       return;
     }
@@ -59,12 +61,19 @@ function TranslationComponent() {
     setTranscription('');
     setTranslation('');
   };
+  const isFieldEmpty = (fieldValue) => {
+    return fieldValue.trim() === '';
+  };
+
+  const checkFieldEmpty = () => {
+    return (
+      isFieldEmpty(word) ||
+      isFieldEmpty(transcription) ||
+      isFieldEmpty(translation)
+    );
+  };
 
   const updateWord = () => {
-    if (word.trim() === '' || transcription.trim() === '' || translation.trim() === '') {
-      alert('Error: please, fill in all fields');
-      return;
-    }
     const updatedString = `${word} ${transcription} ${translation}`;
     const updatedStrings = savedStrings.map((savedString, index) => {
       if (index === editIndex) {
@@ -80,14 +89,7 @@ function TranslationComponent() {
     setTranslation('');
   };
  
-  const handleKeyDown = (event, index) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();
-      if (editIndex === index) {
-        updateWord();
-      }
-    }
-  };
+ 
   
   return (
     <div className={styles.container}>
@@ -97,18 +99,22 @@ function TranslationComponent() {
       type="text" 
       value={word} 
       onChange={WordType} 
-      placeholder="Enter word" />
+      placeholder="Enter word"
+      className={isFieldEmpty(word) ? styles.errorInput : ''}
+      />
       <input
         type="text"
         value={transcription}
         onChange={WordTranscription}
         placeholder="transcription"
+        className={isFieldEmpty(word) ? styles.errorInput : ''}
       />
       <input
         type="text"
         value={translation}
         onChange={WordTranslation}
         placeholder="translation"
+        className={isFieldEmpty(word) ? styles.errorInput : ''}
       />
 
       <button className={styles.saveBtn} onClick={saveWord}>
@@ -122,20 +128,30 @@ function TranslationComponent() {
             <div key={index} className={styles.newString}>
               {editIndex === index ? (
                 <>
-                  <input 
-                  type="text" 
-                  value={word} 
-                  onChange={WordType}
-                  onKeyDown={(event) => handleKeyDown(event, index)} />
-                  <input 
-                  type="text" 
-                  value={transcription} 
-                  onChange={WordTranscription}
-                  onKeyDown={(event) => handleKeyDown(event, index)} />
-                  <input type="text"
-                  value={translation}
-                  onChange={WordTranslation}
-                  onKeyDown={(event) => handleKeyDown(event, index)} />
+                <input
+  type="text"
+  value={word}
+  onChange={WordType}
+  placeholder="Enter word"
+  
+/>
+
+<input
+  type="text"
+  value={transcription}
+  onChange={WordTranscription}
+  placeholder="transcription"
+  
+/>
+
+<input
+  type="text"
+  value={translation}
+  onChange={WordTranslation}
+  placeholder="translation"
+ 
+/>
+
                   
                 </>
               ) : (
@@ -148,7 +164,10 @@ function TranslationComponent() {
               )}
               {editIndex === index ? (
                 <>
-                  <button className={styles.checkBtn} onClick={updateWord}>
+                  <button className={styles.checkBtn}
+                   onClick={updateWord}
+                   disabled={checkFieldEmpty()}
+                   >
                     <img src={check} alt="check icon" />
                   </button>
                   <button className={styles.editBtn} onClick={cancelEditing}>

@@ -27,8 +27,8 @@
     margin-bottom: 10px;
 
     &:focus {
-      outline: 2px solid yellow;
-    }
+      outline: 1px solid #ddb532;
+    }  
   }
 
   .newString {
@@ -38,6 +38,10 @@
 
     .errorInput {
       border: 1px solid #f00; 
+
+      .editBtn {
+       background-color: #ddb532;
+      }
     }
   
     .binBtn {
@@ -65,8 +69,8 @@
   -o-transition: background-color 2s ease-out;
   transition: background-color 2s ease-out;
   }
-  .editBtn,
-  .checkBtn {
+.checkBtn:not(:disabled), 
+.editBtn:not(:disabled) {
     border: none;
     cursor: pointer;
     height: 30px;
@@ -74,7 +78,67 @@
     margin-left: 10px;
     margin-top: 5px;
   }
-  .editing {
-    border-color: #f00; 
+.checkBtn:disabled,
+.editBtn:disabled {
+  cursor: not-allowed;
+  background-color: white;
+  border: none;
+  opacity: 0.3; 
+  margin-left: 10px;
 }
 }
+@media (max-width: 768px) {
+  /* Styles for phone devices */
+  .containerBox {
+    width: 60vw;
+    margin-top: 10vw;
+
+   
+
+  .body {
+    input[type="text"] {
+      width: 80px;
+      margin-left: 5px;
+      margin-bottom: 5px;
+    }       
+                
+    }
+
+    .saveBtn,
+    .editBtn,
+    .checkBtn,
+    .binBtn {
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+   
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .containerBox {
+    width: 80vw;
+   
+  }
+}
+.errorMessage {
+  position: absolute;
+  background-color: none;
+  color: red;
+  padding: 10vw;
+  margin-left: 50vw;
+  font-size: 12px;
+  top: -25px;
+  left: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
+}
+
+
+
+
+
+
+
+

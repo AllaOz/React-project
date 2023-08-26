@@ -34,7 +34,7 @@
   margin-bottom: 10px;
 }
 .body input[type=text]:focus {
-  outline: 2px solid yellow;
+  outline: 1px solid #ddb532;
 }
 .body .newString {
   width: 100%;
@@ -43,6 +43,9 @@
 }
 .body .newString .errorInput {
   border: 1px solid #f00;
+}
+.body .newString .errorInput .editBtn {
+  background-color: #ddb532;
 }
 .body .newString .binBtn {
   cursor: pointer;
@@ -64,8 +67,8 @@
   color: white;
   transition: background-color 2s ease-out;
 }
-.body .editBtn,
-.body .checkBtn {
+.body .checkBtn:not(:disabled),
+.body .editBtn:not(:disabled) {
   border: none;
   cursor: pointer;
   height: 30px;
@@ -73,6 +76,48 @@
   margin-left: 10px;
   margin-top: 5px;
 }
-.body .editing {
-  border-color: #f00;
+.body .checkBtn:disabled,
+.body .editBtn:disabled {
+  cursor: not-allowed;
+  background-color: white;
+  border: none;
+  opacity: 0.3;
+  margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  /* Styles for phone devices */
+  .containerBox {
+    width: 60vw;
+    margin-top: 10vw;
+  }
+  .containerBox .body input[type=text] {
+    width: 80px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+  .containerBox .saveBtn,
+.containerBox .editBtn,
+.containerBox .checkBtn,
+.containerBox .binBtn {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .containerBox {
+    width: 80vw;
+  }
+}
+.errorMessage {
+  position: absolute;
+  background-color: none;
+  color: red;
+  padding: 10vw;
+  margin-left: 50vw;
+  font-size: 12px;
+  top: -25px;
+  left: 0;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }/*# sourceMappingURL=body.module.css.map */

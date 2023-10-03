@@ -16,7 +16,7 @@ function WordComponent() {
   const [wordData, setWordData] = useState([]);
 
   useEffect(() => {
-    fetch('http://itgirlschool.justmakeit.ru/api/words')
+    fetch('https://itgirlschool.justmakeit.ru/api/words')
       .then((response) => response.json())
       .then((data) => setWordData(data))
       .catch((error) => console.error('Error fetching data:', error));

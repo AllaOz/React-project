@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/React-project/static/css/main.1641f9e9.css",
-    "main.js": "/React-project/static/js/main.e80f2bb2.js",
+    "main.css": "/React-project/static/css/main.f1174dc7.css",
+    "main.js": "/React-project/static/js/main.9c1af6c6.js",
     "static/js/787.28cb0dcd.chunk.js": "/React-project/static/js/787.28cb0dcd.chunk.js",
     "static/media/Roboto-Medium.ttf": "/React-project/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Light.ttf": "/React-project/static/media/Roboto-Light.333da16a3f3cc391d087.ttf",
     "static/media/404.png": "/React-project/static/media/404.f988982dd86f10c15915.png",
     "static/media/cards.png": "/React-project/static/media/cards.18e7399a1db29b81cef7.png",
     "index.html": "/React-project/index.html",
-    "main.1641f9e9.css.map": "/React-project/static/css/main.1641f9e9.css.map",
-    "main.e80f2bb2.js.map": "/React-project/static/js/main.e80f2bb2.js.map",
+    "main.f1174dc7.css.map": "/React-project/static/css/main.f1174dc7.css.map",
+    "main.9c1af6c6.js.map": "/React-project/static/js/main.9c1af6c6.js.map",
     "787.28cb0dcd.chunk.js.map": "/React-project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1641f9e9.css",
-    "static/js/main.e80f2bb2.js"
+    "static/css/main.f1174dc7.css",
+    "static/js/main.9c1af6c6.js"
   ]
 }

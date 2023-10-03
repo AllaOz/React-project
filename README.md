@@ -21,11 +21,11 @@
        ```
 <h3>Technologies:</h3>
 <p align="left">
-<a href="https://www.w3.org/html/" target="_blank"> <img src="react-project/public/html5.svg" alt="html5" width="35" height="35"/> </a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" > <img src="react-project/public/javascript.svg" alt="javascript" width="40" height="40"/> </a> 
-<a href="https://reactjs.org/" target="_blank" > <img src="react-project/public/react.svg" alt="react" width="35" height="35"/> </a>
-<a href="https://git-scm.com/" target="_blank"> <img src="react-project/public/git.svg" alt="git" width="35" height="35"/> </a>
-<a href="https://sass-lang.com" target="_blank" > <img src="react-project/public/icons/sass.svg" alt="sass" width="35" height="35"/> </a>
+<a href="https://www.w3.org/html/" target="_blank"> <img src="my-app/html5.svg" alt="html5" width="35" height="35"/> </a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" > <img src="my-app/javascript.svg" alt="javascript" width="40" height="40"/> </a> 
+<a href="https://reactjs.org/" target="_blank" > <img src="my-app/react.svg" alt="react" width="35" height="35"/> </a>
+<a href="https://git-scm.com/" target="_blank"> <img src="my-app/git.svg" alt="git" width="35" height="35"/> </a>
+<a href="https://sass-lang.com" target="_blank" > <img src="my-app/sass.svg" alt="sass" width="35" height="35"/> </a>
 </p>
 
 <h3>Result:</h3>
